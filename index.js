@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
     renderer: "svg",
     loop: false,
     autoplay: false,
-    path: "/Line_Long.json", // the path to the animation json
+    path: "./Line_Long.json", // the path to the animation json
   });
 
   // Get the height of the viewport

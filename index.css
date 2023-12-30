@@ -1,0 +1,569 @@
+@font-face {
+    font-family: "Neue Kabel";
+    src: url("/fonts/NeueKabel.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Neue Kabel";
+    src: url("/fonts/NeueKabel-Black.otf") format("opentype");
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Neue Kabel";
+    src: url("/fonts/NeueKabel-BlackItalic.otf") format("opentype");
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Neue Kabel";
+    src: url("/fonts/NeueKabel-Bold.otf") format("opentype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Neue Kabel";
+    src: url("/fonts/NeueKabel-BoldItalic.otf") format("opentype");
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Neue Kabel";
+    src: url("/fonts/NeueKabel-Book.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Neue Kabel";
+    src: url("/fonts/NeueKabel-BookItalic.otf") format("opentype");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Neue Kabel";
+    src: url("/fonts/NeueKabel-ExtraBold.otf") format("opentype");
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Neue Kabel";
+    src: url("/fonts/NeueKabel-ExtraBoldItalic.otf") format("opentype");
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Neue Kabel";
+    src: url("/fonts/NeueKabel-ExtraLight.otf") format("opentype");
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Neue Kabel";
+    src: url("/fonts/NeueKabel-ExtraLightItalic.otf") format("opentype");
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Neue Kabel";
+    src: url("/fonts/NeueKabel-Italic.otf") format("opentype");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Neue Kabel";
+    src: url("/fonts/NeueKabel-Light.otf") format("opentype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Neue Kabel";
+    src: url("/fonts/NeueKabel-LightItalic.otf") format("opentype");
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Neue Kabel";
+    src: url("/fonts/NeueKabel-Medium.otf") format("opentype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Neue Kabel";
+    src: url("/fonts/NeueKabel-MediumItalic.otf") format("opentype");
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Neue Kabel";
+    src: url("/fonts/NeueKabel-Thin.otf") format("opentype");
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Neue Kabel";
+    src: url("/fonts/NeueKabel-ThinItalic.otf") format("opentype");
+    font-weight: 100;
+    font-style: italic;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #111111;
+}
+
+::selection {
+    color: black;
+    background-color: white;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #111111;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: white;
+}
+
+#psuedo_body {
+    background: linear-gradient(to bottom, #1a1a1a, #111111);
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    backface-visibility: visible;
+    background-color: #111111;
+    perspective: 1000px;
+}
+
+#backface {
+    position: fixed; /* Changed from absolute to fixed */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(17, 17, 17, 0.51), #111),
+        url("/5d71089362d15d7885ef42e2_cartographer_@2X.png");
+    background-repeat: repeat-x;
+    background-size: contain;
+    z-index: -1;
+}
+
+.test {
+    font-weight: bold;
+    color: white;
+    font-size: 50px;
+    height: 100%;
+}
+
+.layer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-weight: bold;
+    color: white;
+    font-size: 50px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: transparent;
+    flex-direction: column;
+    transition: top 0.2s ease-out;
+}
+
+.layer-1 {
+    font-family: "Neue Kabel";
+    font-weight: 900;
+    z-index: 1;
+    height: 75%;
+}
+
+.layer-2 {
+    z-index: 2;
+    height: auto;
+}
+
+.layer-3 {
+    z-index: 3;
+}
+
+.layer-4 {
+    z-index: 4;
+}
+
+.intro_line {
+    margin-top: 15px;
+    width: 2.45px;
+    height: 50px;
+    background-color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    transform: translate(0.2px, 20px);
+}
+
+.scroll_down {
+    margin-top: 15px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.456);
+    font-family: "Neue Kabel";
+    font-weight: 400;
+    font-size: 20px;
+    display: flex;
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.heading_content {
+    position: absolute;
+    bottom: 25%;
+    left: 50%;
+    transform: translate(-50%, -25%);
+    width: 100%;
+}
+
+.sub_heading {
+    padding: 0px 10px;
+    text-align: left !important;
+    font-family: "Neue Kabel";
+    font-weight: 300;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.heading {
+    text-align: left;
+    padding: 5px 25px;
+}
+
+.reveal-element {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.reveal-element::before,
+.reveal-element::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: #111111; /* Change this to the color of your curtain */
+    transition: transform 1s;
+}
+
+.reveal-element::before {
+    left: 0;
+    transform: translateX(0);
+}
+
+.reveal-element::after {
+    right: 0;
+    transform: translateX(0);
+}
+
+.reveal-element.reveal::before {
+    transform: translateX(-100%);
+}
+
+.reveal-element.reveal::after {
+    transform: translateX(100%);
+}
+
+.mail_container {
+    position: fixed !important;
+    bottom: 0;
+    left: 0;
+    writing-mode: vertical-rl;
+    margin: 15px 10px;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(180deg);
+}
+
+.mail_link {
+    color: white;
+    font-family: "Neue Kabel";
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.mail_link:before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 0;
+    top: 0;
+    left: -1px;
+    background-color: white;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out 0s;
+    z-index: -1;
+}
+
+.mail_link:hover:before {
+    height: 100%;
+    visibility: visible;
+}
+
+.linkedin_container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    writing-mode: vertical-lr;
+    margin: 15px 10px;
+}
+
+.linkedin_link {
+    color: white;
+    font-family: "Neue Kabel";
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.linkedin_link:before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 0;
+    top: 0;
+    left: -1px;
+    background-color: white;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out 0s;
+    z-index: -1;
+}
+
+.linkedin_link:hover:before {
+    height: 100%;
+    visibility: visible;
+}
+
+.googlescholar_container {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    writing-mode: vertical-rl;
+    margin: 15px 10px;
+}
+
+.googlescholar_link {
+    color: white;
+    font-family: "Neue Kabel";
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.googlescholar_link:before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 0;
+    bottom: 0;
+    left: -1px;
+    background-color: white;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out 0s;
+    z-index: -1;
+}
+
+.googlescholar_link:hover:before {
+    height: 100%;
+    visibility: visible;
+}
+
+.prof_image_container {
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    z-index: -1;
+}
+
+.prof_image {
+    max-width: 400px;
+    width: 100%;
+    margin-right: 200px;
+    scale: 1.5;
+    opacity: 0.5;
+    user-select: none;
+    filter: grayscale(80%) blur(1px);
+    transition: all 0.3s ease-in-out;
+    border-radius: 50%;
+}
+
+.prof_image:hover {
+    transform: translateY(-10px);
+    border-radius: 0%;
+    filter: grayscale(20%) blur(0.1px);
+}
+
+.heading:hover.prof_image {
+    transform: translateY(-10px);
+    border-radius: 0%;
+    filter: grayscale(20%) blur(0.1px);
+}
+
+.prof_logo {
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100000;
+    font-family: "Neue Kabel";
+    font-size: 43px;
+    font-weight: 900;
+    margin: 10px 15px;
+    user-select: none;
+}
+
+.prof_brief_info {
+    font-size: 20px;
+    color: black;
+    background-color: white;
+    width: 300px;
+    margin: 15px 20px;
+    padding: 15px 30px;
+    transform: translateX(13px);
+    display: flex;
+    font-family: "Neue Kabel";
+    font-weight: 400;
+    position: absolute;
+    top: 200%;
+    left: 0%;
+    text-align: left;
+    z-index: 10000;
+    overflow: hidden;
+}
+
+.prof_brief_info::before,
+.prof_brief_info::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: #111111; /* Change this to the color of your curtain */
+    transition: transform 0.5s;
+}
+
+.prof_brief_info::before {
+    left: 0;
+    transform: translateX(0);
+}
+
+.prof_brief_info::after {
+    right: 0;
+    transform: translateX(0);
+}
+
+.prof_brief_info.reveal::before {
+    transform: translateX(-100%);
+}
+
+.prof_brief_info.reveal::after {
+    transform: translateX(100%);
+}
+
+.inner_website {
+    width: 100%;
+    height: 100%;
+}
+
+.ripple {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    -webkit-text-stroke: 0.1px white;
+    color: transparent;
+    transform: scale(0);
+    opacity: 1;
+}
+
+@media (max-width: 998px) {
+    .prof_brief_info {
+        top: 160%;
+    }
+}
+
+@media (max-width: 768px) {
+    .intro_line {
+        width: 1.7px;
+    }
+    .prof_image_container {
+        justify-content: center;
+    }
+    .prof_image {
+        margin-right: 0px;
+    }
+    .prof_brief_info {
+        top: 140%;
+        font-size: 14px;
+        padding: 10px 14px;
+    }
+    .heading {
+        transform: translateY(100px);
+        text-align: center;
+    }
+    .sub_heading {
+        text-align: center !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .prof_brief_info {
+        top: 130%;
+        font-size: 13px;
+        padding: 9px 12px;
+        width: 250px;
+    }
+}
+
+@media (max-width: 400px) {
+    .prof_brief_info {
+        top: 120%;
+        font-size: 12px;
+        font-weight: 500;
+        padding: 7px 10px;
+        width: 200px;
+    }
+}

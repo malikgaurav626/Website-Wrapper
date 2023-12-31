@@ -141,6 +141,9 @@ ripples.forEach((ripple, index) => {
     },
   });
 });
+
+///////// Intro Line Animation
+
 // Select the intro_line element
 var introLine = document.querySelector(".intro_line");
 
@@ -176,4 +179,41 @@ window.addEventListener("scroll", function () {
   let scrollPosition = window.scrollY;
   let percent = (scrollPosition / scrollableHeight) * 100;
   setProgress(percent);
+});
+
+///////// heading hover event listener
+
+document.querySelector(".heading").addEventListener("mouseover", function () {
+  document.querySelector(".prof_image").style.transform =
+    "translateY(-10px) scale(1.5)";
+  document.querySelector(".prof_image").style.borderRadius = "0%";
+  document.querySelector(".prof_image").style.filter =
+    "grayscale(20%) blur(0.1px)";
+});
+
+document.querySelector(".heading").addEventListener("mouseout", function () {
+  document.querySelector(".prof_image").style.transform = "";
+  document.querySelector(".prof_image").style.borderRadius = "";
+  document.querySelector(".prof_image").style.filter = "";
+});
+
+///////// mouse pointer click animation
+
+document.addEventListener("click", function (e) {
+  // Create a new div element for the click effect
+  var clickEffect = document.createElement("div");
+  clickEffect.className = "clickEffect";
+
+  // Set the size and position of the click effect
+  clickEffect.style.width = clickEffect.style.height = "100px";
+  clickEffect.style.left = e.pageX - 50 + "px";
+  clickEffect.style.top = e.pageY - 50 + "px";
+
+  // Add the click effect to the body
+  document.body.appendChild(clickEffect);
+
+  // Remove the click effect after the animation ends
+  setTimeout(function () {
+    clickEffect.parentNode.removeChild(clickEffect);
+  }, 2000);
 });

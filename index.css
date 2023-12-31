@@ -519,6 +519,22 @@ body {
     opacity: 1;
 }
 
+.progress-ring__circle {
+    stroke-dasharray: 365;
+    stroke-dashoffset: var(--scroll);
+    transition: stroke-dashoffset 0.35s;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    stroke: white;
+    scale: 0.2;
+}
+
+.scrollprogress{
+    position: fixed;
+    top: -30px;
+    right: 0;
+}
+
 @media (max-width: 998px) {
     .prof_brief_info {
         top: 160%;

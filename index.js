@@ -157,3 +157,24 @@ anime({
   loop: true,
   delay: 3000,
 });
+
+///////// scroll progress bar
+
+let circle = document.querySelector(".progress-ring__circle");
+let radius = circle.r.baseVal.value;
+let circumference = radius * 2 * Math.PI;
+circle.style.strokeDasharray = `${circumference} ${circumference}`;
+circle.style.strokeDashoffset = circumference;
+
+function setProgress(percent) {
+  const offset = circumference - (percent / 100) * circumference;
+  circle.style.strokeDashoffset = offset;
+}
+
+window.addEventListener("scroll", function () {
+  let scrollableHeight =
+    document.documentElement.scrollHeight - window.innerHeight;
+  let scrollPosition = window.scrollY;
+  let percent = (scrollPosition / scrollableHeight) * 100;
+  setProgress(percent);
+});

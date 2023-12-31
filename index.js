@@ -57,7 +57,6 @@ document.addEventListener("DOMContentLoaded", function () {
       multiplier = 25;
     }
     let animationProgress = (scrollPosition * multiplier) / viewportHeight;
-    console.log(animationProgress);
     if (animationProgress > 30) {
       animationProgress = 29;
     }

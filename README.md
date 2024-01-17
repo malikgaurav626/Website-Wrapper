@@ -3,7 +3,7 @@
 This is a simple website wrapper crafted with HTML, CSS, JavaScript, Anime.js, and Lottie.js. The aim of this project is to provide a basic yet flexible structure for web development.
 
 ## Demo
-Check out the live demo on [GitHub Pages](https://malikgaurav626.github.io/website-wrapper).
+Check out the live demo on [GitHub Pages](https://malikgaurav626.github.io/Website-Wrapper).
 
 ## Features
 - **HTML, CSS, JavaScript:** Core web technologies for structure, styling, and interactivity.

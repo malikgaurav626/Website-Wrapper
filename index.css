@@ -129,6 +129,7 @@ body {
     padding: 0;
     background-color: #111111;
     scroll-snap-type: y mandatory;
+    overflow-y: scroll;
     scroll-behavior: smooth;
 }
 
@@ -158,6 +159,8 @@ body {
     backface-visibility: visible;
     background-color: #111111;
     perspective: 1000px;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
 }
 
 #backface {
@@ -218,8 +221,18 @@ body {
 .layer-4 {
     z-index: 4;
 }
-
+.scroll_down_container{
+    display: flex;
+    width: 100%;
+    position: relative;
+}
 .intro_line {
+    position: absolute;
+    left: calc(50% - 1.2px);
+    top: 50%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 15px;
     width: 2.45px;
     height: 50px;
@@ -235,6 +248,7 @@ body {
 
 .scroll_down {
     margin-top: 15px;
+    margin-bottom: 15px;
     text-align: center;
     color: rgba(255, 255, 255, 0.456);
     font-family: "Neue Kabel";
@@ -265,7 +279,9 @@ body {
     text-align: center;
     margin-top: 20px;
 }
-
+.svg_container{
+    margin-top: 36px;
+}
 .heading {
     text-align: left;
     padding: 5px 25px;
@@ -452,6 +468,8 @@ body {
     font-weight: 900;
     margin: 10px 15px;
     user-select: none;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .prof_brief_info {
@@ -473,29 +491,20 @@ body {
     overflow: hidden;
 }
 
-.prof_brief_info::before,
+
 .prof_brief_info::after {
     content: "";
     position: absolute;
     top: 0;
-    width: 50%;
+    width: 100%;
     height: 100%;
     background: #111111; /* Change this to the color of your curtain */
     transition: transform 0.5s;
 }
 
-.prof_brief_info::before {
-    left: 0;
-    transform: translateX(0);
-}
-
 .prof_brief_info::after {
     right: 0;
     transform: translateX(0);
-}
-
-.prof_brief_info.reveal::before {
-    transform: translateX(-100%);
 }
 
 .prof_brief_info.reveal::after {

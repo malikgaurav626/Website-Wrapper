@@ -217,3 +217,41 @@ document.addEventListener("click", function (e) {
     clickEffect.parentNode.removeChild(clickEffect);
   }, 2000);
 });
+
+// scroll-snap
+
+var elements = document.querySelectorAll(".reveal-element-container-1");
+
+// Observer for entering the viewport
+var observerEnter = new IntersectionObserver(
+  function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        window.scrollTo({ bottom: 0, behavior: "smooth" });
+      }
+    });
+  },
+  {
+    threshold: 0.5,
+  }
+);
+
+// Observer for exiting the viewport
+var observerExit = new IntersectionObserver(
+  function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    });
+  },
+  {
+    threshold: 0.3,
+  }
+);
+
+// Observe each element
+elements.forEach(function (element) {
+  observerEnter.observe(element);
+  observerExit.observe(element);
+});

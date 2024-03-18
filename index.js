@@ -220,19 +220,20 @@ document.addEventListener("click", function (e) {
 
 // scroll-snap
 
-var elements = document.querySelectorAll(".reveal-element-container-1");
-
 // Observer for entering the viewport
 var observerEnter = new IntersectionObserver(
   function (entries) {
     entries.forEach(function (entry) {
       if (entry.isIntersecting) {
-        window.scrollTo({ bottom: 0, behavior: "smooth" });
+        window.scrollTo({
+          top: document.body.scrollHeight,
+          behavior: "smooth",
+        });
       }
     });
   },
   {
-    threshold: 0.5,
+    threshold: 0.2,
   }
 );
 
@@ -251,7 +252,8 @@ var observerExit = new IntersectionObserver(
 );
 
 // Observe each element
-elements.forEach(function (element) {
-  observerEnter.observe(element);
-  observerExit.observe(element);
-});
+
+observerEnter.observe(document.querySelector(".reveal-element-container-1"));
+observerExit.observe(document.querySelector(".reveal-element-container-1"));
+
+let revealElementItem = document.getElementById("reveal-element-id");

@@ -255,5 +255,3 @@ var observerExit = new IntersectionObserver(
 
 observerEnter.observe(document.querySelector(".reveal-element-container-1"));
 observerExit.observe(document.querySelector(".reveal-element-container-1"));
-
-let revealElementItem = document.getElementById("reveal-element-id");

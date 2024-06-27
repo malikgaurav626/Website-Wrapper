@@ -179,6 +179,20 @@ window.addEventListener("scroll", function () {
   let scrollPosition = window.scrollY;
   let percent = (scrollPosition / scrollableHeight) * 100;
   setProgress(percent);
+  // Check if scrolled to complete height
+  console.log(percent);
+  if (percent > 90) {
+    document.querySelector(".scrollprogress").style.opacity = "0";
+    document.querySelector(".scrollprogress").style.transition = "0.2s all";
+    document.querySelector(".linkedin_link").style.opacity = "0";
+    document.querySelector(".linkedin_link").style.transition = "0.2s all";
+  } else {
+    // Optional: Reset opacity if you want the logo to reappear when not at the bottom
+    document.querySelector(".scrollprogress").style.opacity = "1";
+    document.querySelector(".scrollprogress").style.transition = "0.2s all";
+    document.querySelector(".linkedin_link").style.opacity = "1";
+    document.querySelector(".linkedin_link").style.transition = "0.2s all";
+  }
 });
 
 ///////// heading hover event listener
